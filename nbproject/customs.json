@@ -1,6 +1,9 @@
 {
     "elements": {},
     "attributes": {
+        "v-bind:class": {
+            "context": "p"
+        },
         "v-if": {
             "context": "h1"
         },
@@ -9,6 +12,9 @@
         },
         "v-for": {
             "context": "li"
+        },
+        "v-bind:src": {
+            "context": "img"
         },
         "v-show": {},
         "v-model": {

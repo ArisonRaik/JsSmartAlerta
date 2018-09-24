@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--https://unpkg.com/vue
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="pt-br">
+    <head>
+        <title>TODO supply a title</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+      
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        <style media="screen">
+            .red{
+                color: red
+            }
+            
+            .green{
+                color: green
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <h1>{{ titulo }}</h1>
+            <img v-bind:src="imagem" 
+                 v-bind:alt="alt" title="" id=""
+                 v-bind:data-img-large="'https://vuejs.org/images/vueschool.png'"
+                 
+                 >
+            
+            <p v-bind:class="classHtml">Lorem Ipsum</p>
+            <button class="btn" v-bind:class="btnClassLimpar" v-bind:style="btnStyleLimpar">LIMPAR</button>
+            <button class="btn" v-bind:class="btnClassEnviar" v-bind:style="btnStyleEnviar">ENVIAR</button>
+                
+        </div>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    titulo: "Aula1 - Vuejs do jeito ninja!",
+                    classHtml: "green",
+                    alt:"VueJs is awesome!",
+                    imagem: "https://vuejs.org/images/vueschool.png",
+                    btnClassLimpar: { 'btn-danger': true, 'btn-sm': true},
+                    btnClassEnviar: ['btn-primary',{ 'btn-lg': true}],
+                    
+                    btnStyleLimpar: [
+                        {'font-size':'50px'},
+                        {'text-transform':'lowercase'}
+                    ],
+                    btnStyleEnviar: {
+                        'font-size': '10px'
+                    },
+                }})
+        </script>
+    </body>
+</html>
