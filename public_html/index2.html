@@ -35,8 +35,15 @@ and open the template in the editor.
                  >
             
             <p v-bind:class="classHtml">Lorem Ipsum</p>
+            
+            
+            <form action="http://google.com">
+                <button type="submit" class="btn btn-primary" v-on:click.prevent.stop="enviar()">Enviar com stop</button>
+                <button type="submit" class="btn btn-primary" v-on:click="enviar()">Enviar</button>
+            </form>
+            
             <button class="btn" v-bind:class="btnClassLimpar" v-bind:style="btnStyleLimpar">LIMPAR</button>
-            <button class="btn" v-bind:class="btnClassEnviar" v-bind:style="btnStyleEnviar">ENVIAR</button>
+            <button class="btn btn-primary" v-on:click="enviar()" v-bind:class="btnClassEnviar" v-bind:style="btnStyleEnviar">ENVIAR</button>
                 
         </div>
         
@@ -60,7 +67,14 @@ and open the template in the editor.
                     btnStyleEnviar: {
                         'font-size': '10px'
                     },
-                }})
+                },
+                
+                methods: {
+                    enviar(){
+                        alert('Enviado!');
+                    },
+                }
+            })
         </script>
     </body>
 </html>

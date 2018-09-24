@@ -7,6 +7,9 @@
         "v-if": {
             "context": "h1"
         },
+        "v-on:click": {
+            "context": "button"
+        },
         "v-else": {
             "context": "div"
         },
@@ -15,6 +18,9 @@
         },
         "v-bind:src": {
             "context": "img"
+        },
+        "v-on:click.prevent.stop": {
+            "context": "button"
         },
         "v-show": {},
         "v-model": {
