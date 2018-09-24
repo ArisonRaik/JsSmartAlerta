@@ -1,0 +1,18 @@
+{
+    "elements": {},
+    "attributes": {
+        "v-if": {
+            "context": "h1"
+        },
+        "v-else": {
+            "context": "div"
+        },
+        "v-for": {
+            "context": "li"
+        },
+        "v-show": {},
+        "v-model": {
+            "context": "input"
+        }
+    }
+}
