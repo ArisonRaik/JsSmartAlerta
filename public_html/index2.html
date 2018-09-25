@@ -36,6 +36,9 @@ and open the template in the editor.
             
             <p v-bind:class="classHtml">Lorem Ipsum</p>
             
+            <ul>
+                <li v-for="usuario in usuarios">{{usuario.nome | truncate('5')}}</li>
+            </ul>
             
             <form action="http://google.com">
                 <button type="submit" class="btn btn-primary" v-on:click.prevent.stop="enviar()">Enviar com stop</button>
@@ -49,6 +52,9 @@ and open the template in the editor.
         
         
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        
+        
+        
         <script>
             var app = new Vue({
                 el: "#app",
@@ -67,7 +73,34 @@ and open the template in the editor.
                     btnStyleEnviar: {
                         'font-size': '10px'
                     },
+                    
+                    usuarios: [
+                        {nome: 'Jon Snow'},
+                        {nome:'Lanister johnny'},
+                        {nome:'joaquim meireiles'},
+                        
+                    ],
+                    
+                    
                 },
+                
+               filters: {
+                        toUpperCase(str){
+                            return str.toUpperCase();
+                        },
+                        
+                        truncate(str, length) {
+                            var output = str;
+                                if(output.length > length){
+                                    output = str.substring(0, length) + '...';
+                                }
+                    
+                            return output;
+                    
+                                                },
+                    },
+                
+                
                 
                 methods: {
                     enviar(){
