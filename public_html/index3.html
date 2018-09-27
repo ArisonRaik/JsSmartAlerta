@@ -1,0 +1,67 @@
+<html lang="pt-br">
+    <head>
+        <title>TODO supply a title</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+      
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        
+    </head>
+    <body>
+        <div id="app">
+            <h1>{{ titulo }}</h1>
+            {{fullName}}
+            
+        </div>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        
+        
+        
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    titulo: "Aula1 - Vuejs do jeito ninja!",
+                    firstName: "",
+                    lastName: "",
+                    //fullName:""
+                },
+                
+               
+                
+                computed: {
+                    fullName(){
+                        
+                        return this.firstName + '' + this.lastName;
+                }
+                },
+                
+                watch: {
+                    
+                    firstName(newValue) {
+                        this.updateUser();
+                    }
+                    //firstName(newValue) {
+                    //    this.fullName = newValue + '' + this.lastName;
+                    //},
+                    
+                    //lastName(newValue) {
+                     //   this.fullName = this.firstName + '' + newValue;
+                    //}
+                },
+                
+                methods: {
+                    updateUser(){
+                        console.log('Usuario atualizado!!!!!!!');
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
